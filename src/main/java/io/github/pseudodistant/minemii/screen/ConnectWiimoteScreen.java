@@ -64,4 +64,11 @@ public class ConnectWiimoteScreen extends Screen {
 
 		super.render(matrices, mouseX, mouseY, delta);
 	}
+
+	@Override
+	public void tick() {
+		if (((WiiMoteClient) MinecraftClient.getInstance()).getWiimote() != null) {
+			MinecraftClient.getInstance().setScreen(new MineMiiTitleScreen());
+		}
+	}
 }

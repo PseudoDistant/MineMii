@@ -4,17 +4,19 @@ import motej.Mote;
 import motej.MoteFinder;
 
 public interface WiiMoteClient {
-	public boolean isDiscoveryEnabled();
+	boolean isDiscoveryEnabled();
 
-	public void setDiscovery(boolean bl);
+	void setDiscovery(boolean bl);
 
-	public Mote getWiimote();
+	Mote getWiimote();
 
-	public int[] getAccel();
+	int[] getAccel();
 
-	public MoteFinder getFinder();
+	MoteFinder getFinder();
 
-	public WiimoteInput getButtOns();
+	WiimoteInput getButtOns();
 
-	public void startWiimoteDiscovery(boolean titleScreen);
+	void startWiimoteDiscovery(boolean titleScreen);
+
+	double[] getIrCoords();
 }
